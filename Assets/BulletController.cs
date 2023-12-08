@@ -13,7 +13,7 @@ public class BulletController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float speed = 10;
+        float speed = 12;
 
         Vector2 movement = new Vector2(0, speed) * Time.deltaTime;
         transform.Translate(movement);

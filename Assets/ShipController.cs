@@ -14,7 +14,7 @@ public class ShipController : MonoBehaviour
     [SerializeField]
     int maxHp = 100;
 
-    int currentHp;
+    public int currentHp;
 
     [SerializeField]
     GameObject bulletPrefab;
@@ -66,9 +66,15 @@ public class ShipController : MonoBehaviour
             SceneManager.LoadScene(1);
             }
         }
+
+        if(other.gameObject.tag == "HPickup" && currentHp < 100)
+        {
+            currentHp += 5;
+            updateHealthSlider();
+        }
     }
 
-    private void updateHealthSlider(){
+    public void updateHealthSlider(){
             healthSlider.maxValue = maxHp;
             healthSlider.value = currentHp;
             healthText.text = currentHp + "/" + maxHp;

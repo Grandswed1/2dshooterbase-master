@@ -6,6 +6,7 @@ TagManager:
   tags:
   - enemy
   - bolt
+  - HPickup
   layers:
   - Default
   - TransparentFX
